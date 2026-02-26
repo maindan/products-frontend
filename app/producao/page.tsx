@@ -27,9 +27,6 @@ export default function ProducaoPage() {
   return (
     <div className="min-h-screen bg-zinc-50/50 py-12 px-6">
       <div className="max-w-4xl mx-auto space-y-8">
-        {/* <PageHeader 
-          title="Sugestão de Produção" 
-        /> */}
 
         <Card className="border-none shadow-2xl bg-white/80 backdrop-blur-sm overflow-hidden pt-0">
           <CardHeader className="bg-zinc-900 text-white p-8">
