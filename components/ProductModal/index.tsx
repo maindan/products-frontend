@@ -27,6 +27,7 @@ import { useMaterials, useCreateMaterial } from "@/src/hooks/useMaterial"
 import { useCreateProduct, useUpdateProduct } from "@/src/hooks/useProduct"
 import { ProductWithMaterials, ProductCreateRequest } from "@/src/types/product"
 import { ConfirmDialog } from "@/components/ConfirmDialog"
+import { Material } from "@/src/types/material"
 
 interface Props {
   open: boolean
@@ -85,7 +86,7 @@ export function ProductModal({ open, onClose, product }: Props) {
         name: newMat.name,
         code: newMat.code,
         stockQuantity: newMat.stock,
-      })
+      }) as Material
       addMaterial(created.id)
       setNewMat({ name: "", code: "", stock: 0 })
       setShowQuickAdd(false)
