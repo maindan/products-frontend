@@ -6,12 +6,14 @@ if (!API_BASE) {
   throw new Error("API_BASE_URL não definida")
 }
 
-async function handler(
+async function forwardRequest(
   req: NextRequest,
   method: string,
-  path: string[],
+  path: string[]
 ) {
-  const url = `${API_BASE}/${path.join("/")}`
+  const url = `${API_BASE}/${path.join("/")}${
+    req.nextUrl.search
+  }`
 
   const body =
     method !== "GET" && method !== "DELETE"
@@ -37,37 +39,46 @@ async function handler(
   })
 }
 
+type RouteContext = {
+  params: Promise<{ path: string[] }>
+}
+
 export async function GET(
   req: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: RouteContext
 ) {
-  return handler(req, "GET", params.path)
+  const { path } = await context.params
+  return forwardRequest(req, "GET", path)
 }
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: RouteContext
 ) {
-  return handler(req, "POST", params.path)
+  const { path } = await context.params
+  return forwardRequest(req, "POST", path)
 }
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: RouteContext
 ) {
-  return handler(req, "PUT", params.path)
+  const { path } = await context.params
+  return forwardRequest(req, "PUT", path)
 }
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: RouteContext
 ) {
-  return handler(req, "PATCH", params.path)
+  const { path } = await context.params
+  return forwardRequest(req, "PATCH", path)
 }
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { path: string[] } }
+  context: RouteContext
 ) {
-  return handler(req, "DELETE", params.path)
+  const { path } = await context.params
+  return forwardRequest(req, "DELETE", path)
 }
