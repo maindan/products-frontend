@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL as string
+const API_URL = "/api/proxy"
 
 export async function apiFetch<T>(
   endpoint: string,
