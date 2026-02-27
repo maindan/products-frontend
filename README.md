@@ -36,10 +36,10 @@ O projeto foi construído com as melhores práticas de desenvolvimento frontend:
 Para rodar este projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/products-manager.git
+   git clone https://github.com/maindan/products-frontend.git
 
 2. Acesse a pasta do projeto:
-   cd products-manager
+   cd products-frontend
 
 3. Instale as dependências:
    npm install
