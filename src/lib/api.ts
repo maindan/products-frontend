@@ -1,4 +1,4 @@
-const API_URL = "/api/proxy"
+const API_URL = "/api"
 
 export async function apiFetch<T>(
   endpoint: string,
