@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Products Manager - Frontend
 
-## Getting Started
+O Products Manager é uma aplicação web moderna voltada para o gerenciamento de produtos, insumos e controle de produção. Desenvolvida para oferecer uma interface intuitiva e performática, a ferramenta permite o acompanhamento detalhado de estoques e a sugestão inteligente de produção.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto foi construído com as melhores práticas de desenvolvimento frontend:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js: Framework React para produção com roteamento otimizado.
+- React Query (TanStack Query): Gerenciamento de estado assíncrono e cache de dados da API.
+- Shadcn/UI: Componentes de interface acessíveis e altamente customizáveis.
+- Tailwind CSS: Estilização baseada em utilitários para um design responsivo.
+- Lucide React: Conjunto de ícones leves e elegantes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades Principais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Gerenciamento de Produtos
+- Listagem e Busca: Visualização clara de todos os produtos com filtros de pesquisa.
+- CRUD Completo: Criação, edição e exclusão de produtos via modais.
+- Composição de Custos: Definição de insumos para cada produto e cálculo de preço de venda.
 
-## Learn More
+### Gerenciamento de Materiais (Insumos)
+- Controle total sobre as matérias-primas.
+- Busca rápida e atualização de estoque de insumos.
 
-To learn more about Next.js, take a look at the following resources:
+### Produção Inteligente
+- Sugestões de Produção: O sistema analisa o estoque atual de insumos e sugere quais produtos podem ser fabricados.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Experiência do Usuário (UX)
+- Modais: Fluxos de criação e edição sem sair da tela principal.
+- Feedback Visual: Notificações via Toasts para confirmação de ações.
+- Interface Limpa: Foco na usabilidade e agilidade no gerenciamento.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Instalação e Execução
 
-## Deploy on Vercel
+Para rodar este projeto localmente, siga os passos abaixo:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone o repositório:
+   git clone https://github.com/seu-usuario/products-manager.git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Acesse a pasta do projeto:
+   cd products-manager
+
+3. Instale as dependências:
+   npm install
+
+4. Inicie o servidor de desenvolvimento:
+   npm run dev
+
+5. Acesse no navegador:
+   O projeto estará disponível em http://localhost:3000.
